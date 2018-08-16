@@ -1,0 +1,93 @@
+  		@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+  		body {
+  			font-family: 'Ubuntu', sans-serif;
+  		}
+
+  		.screen1 {
+  			background-color: #87B8B8;
+  		}
+
+  		.screen2 {
+  			background-color: #87B8B8;
+  		}
+
+  		.screen3 {
+  			background-color: #BEEDAB;
+  		}
+
+  		.Title {
+  			text-align: center;
+  			font-size: 4rem;
+  			font-weight: 10;
+  		}
+  		
+  		.para {
+  			/*text-align: center;*/
+  			font-size: 1.5rem;
+  			width: 60%;
+  			margin: 0 auto;
+  		}
+  		.circle-para {
+  			position: sticky;
+  			position: -webkit-sticky;
+  			top: 0;
+  			height: 700px;
+  			width: 90%;
+  			z-index: 50;
+  			/*border: 2px solid #4CAF50;*/
+  			margin: 0 auto;
+  		}
+		
+		.filler {
+			height: 500px;
+			/*border: 2px solid;*/
+		}
+
+		/*.chart1 {
+			float: right;
+			position: -webkit-sticky;
+		  	position: sticky;
+		  	top: 0;
+		  	height: 800px;*/
+		  	/*border: 2px solid #4CAF50;*/
+		 /* 	width: 63%;
+		}*/
+		
+		/*.txtspace1 {
+			width: 35%;
+			height: 800px;
+			top: 0;
+			right: 10;
+			text-align: center;			
+			vertical-align: -300px;
+			font-size: 1.5rem;
+			overflow: scroll;*/
+			/*border: 2px solid #4CAF50;*/
+		/*}
+		
+		.chart2 {
+			float: right;
+			position: -webkit-sticky;
+		  	position: sticky;
+		  	top: 0;
+		  	height: 800px;
+		  	border: 2px solid #4CAF50;
+		  	width: 63%;
+		}
+*/
+		.x.axis line {
+		  stroke: #fff;
+		}
+
+		.y.axis line {
+		  stroke: #fff;
+		}
+
+		.x.axis path {
+		  stroke: #fff;
+		}
+
+		.y.axis path {
+		  stroke: #fff;
+		}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DM presentation</title>
+	<meta charset="utf-8">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.0.0/d3.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  	<style type="text/css">
+  		body {
+  			font-family: Helvetica, Arial;
+  			color: #ffffff;
+  			background-color: #000000;
+  		}
+  		.Head-para {
+  			text-align: center;
+  		}
+  		
+  		.circlepara {
+  			position: relative;
+  			position: -webkit-relative;
+  			top: 0;
+  			height: 350px;
+  			border-width: 2px;
+  			width: 100%;
+  			z-index: 50;
+/*  			background-color: #33FFF6;
+*/  		}
+		
+		.chart1 {
+			float: right;
+			position: -webkit-sticky;
+		  	position: sticky;
+		  	top: 0;
+		  	height: 800px;
+		  	/*border: 2px solid #4CAF50;*/
+		  	width: 63%;
+		}
+		
+		.txtspace1 {
+			width: 35%;
+			height: 800px;
+			top: 0;
+			right: 10;
+			text-align: center;			
+			vertical-align: -300px;
+			font-size: 1.5rem;
+			overflow: scroll;
+			/*border: 2px solid #4CAF50;*/
+		}
+		
+		.chart2 {
+			float: right;
+			position: -webkit-sticky;
+		  	position: sticky;
+		  	top: 0;
+		  	height: 800px;
+		  	border: 2px solid #4CAF50;
+		  	width: 63%;
+		}
+
+		.x.axis line {
+		  stroke: #fff;
+		}
+
+		.y.axis line {
+		  stroke: #fff;
+		}
+
+		.x.axis path {
+		  stroke: #fff;
+		}
+
+		.y.axis path {
+		  stroke: #fff;
+		}
+  	</style>
+</head>
+<body>
+	<div id="whole-page" style="height: 100vh; width: 100%; overflow: scroll;">
+		<div class="Head-para">
+			<h1>This is where the title should go</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div><p style="text-align: center; font-weight: 100;"></p>
+			<div class="circlepara"></div>
+		</div>
+		<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div id="paras">
+			<div class="chart1"></div>
+			<div class="txtspace1">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				Figure 1.1 - Scroll value = <span id="scrollvalue"></span>
+			</div>
+			<div class="txtspace1">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				Figure 1.2 - Scroll value = <span id="scrollvalue"></span>
+			</div>
+			<div><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+		</div>
+		<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div id="paras">
+			<div class="chart2">chart will be here</div>
+			<div class="txtspace1">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				Figure 2.1 - Scroll value = <span id="scrollvalue"></span>
+			</div>
+			<div class="txtspace1">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				Figure 2.2 - Scroll value = <span id="scrollvalue"></span>
+			</div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<script type="text/javascript">
+		// Common
+		var wholepage = d3.select('#whole-page')
+		var t = d3.transition().duration(750);
+		var scrollTop = 0
+    	var newScrollTop = 0
+    	var flag1 = "Y"
+    	var flag2 = "Y"
+    	var margin = { left:100, right:20, top:100, bottom:60 };
+
+		var width = 950 - margin.left - margin.right,
+		    height = 650 - margin.top - margin.bottom;
+
+		var flag = true;
+		    
+		wholepage
+	  		.on("scroll.scroller", function() {
+	      	newScrollTop = wholepage.node().scrollTop
+	    });
+
+	  	var scrollvalue = d3.selectAll('#scrollvalue')
+
+	  	// Circle 
+	  	var svg1 = d3.select(".circlepara").append("svg")
+			.attr("width", "100%")
+			.attr("height", "100%");
+
+		var circle1 = svg1.append("circle")
+			.attr("cx", 830)
+			.attr("cy", 155)
+			.attr("r", 100)
+			.attr("fill", "#B3D12D");
+
+		var text1 = svg1.append("text")
+			.attr("x", 817)
+			.attr("y", 250)
+			.attr("fill", "white");
+
+		var circle2 = svg1.append("circle")
+    		.attr("cx", 830)
+    		.attr("cy", 155)
+    		.attr("r", 100)
+    		.attr("fill", "#B3D12D");
+
+    	var text2 = svg1.append("text")
+			.attr("x", 817)
+			.attr("y", 250)
+			.attr("fill", "white");
+
+    	var circle3 = svg1.append("circle")
+    		.attr("cx", 830)
+    		.attr("cy", 155)
+    		.attr("r", 100)
+    		.attr("fill", "#B3D12D");
+
+    	var text3 = svg1.append("text")
+			.attr("x", 817)
+			.attr("y", 250)
+			.attr("fill", "white");
+
+    	var circle4 = svg1.append("circle")
+    		.attr("cx", 830)
+    		.attr("cy", 155)
+    		.attr("r", 100)
+    		.attr("fill", "#B3D12D");
+
+    	var text4 = svg1.append("text")
+			.attr("x", 817)
+			.attr("y", 250)
+			.attr("fill", "white");
+
+    	var circle5 = svg1.append("circle")
+    		.attr("cx", 830)
+    		.attr("cy", 155)
+    		.attr("r", 100)
+    		.attr("fill", "#B3D12D");
+
+    	var text5 = svg1.append("text")
+			.attr("x", 817)
+			.attr("y", 250)
+			.attr("fill", "white");
+
+    	// Bar chart
+    	/*var margin = { left:100, right:20, top:100, bottom:60 };
+
+		var width = 950 - margin.left - margin.right,
+		    height = 650 - margin.top - margin.bottom;
+
+		var flag = true;*/
+		    
+		var g = d3.select(".chart1")
+		    .append("svg")
+		        .attr("width", width + margin.left + margin.right)
+		        .attr("height", height + margin.top + margin.bottom)
+		    .append("g")
+		        .attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
+		        .attr("stroke", "white");
+
+		var xAxisGroup = g.append("g")
+		    .attr("class", "x axis")
+		    .attr("stroke", "white")
+		    .attr("transform", "translate(0," + height +")");
+
+		var yAxisGroup = g.append("g")
+		    .attr("class", "y axis")
+		    .attr("stroke", "white");
+
+		// X Scale
+		var x = d3.scaleBand()
+		    .range([0, width])
+		    .padding(0.2);
+
+		// Y Scale
+		var y = d3.scaleLinear()
+		    .range([height, 0]);
+
+		// X Label
+		g.append("text")
+		    .attr("y", height + 55)
+		    .attr("x", width / 2)
+		    .attr("font-size", "20px")
+		    .attr("text-anchor", "middle")
+		    .attr("stroke", "white")
+		    .text("Month");
+
+		// Y Label
+		var yLabel = g.append("text")
+		    .attr("y", -65)
+		    .attr("x", -(height / 2))
+		    .attr("font-size", "20px")
+		    .attr("text-anchor", "middle")
+		    .attr("transform", "rotate(-90)")
+		    .attr("stroke", "white")
+		    .text("Revenue");
+
+		// Bar chart data
+		var bardata = [{"month": "January","revenue": "13432","profit": "8342"},{"month": "February","revenue": "19342","profit": "10342"},{"month": "March","revenue": "17443","profit": "15423"},{"month": "April","revenue": "26342","profit": "18432"},{"month": "May","revenue": "34213","profit": "29434"},{"month": "June","revenue": "50321","profit": "45343"},{"month": "July","revenue": "54273","profit": "47452"}];
+
+		// d3.json("data/revenues.json").then(function(data){
+
+		    // Clean data
+	    bardata.forEach(function(d) {
+	        d.revenue = +d.revenue;
+	        d.profit = +d.profit;
+	    });
+
+	    /*d3.interval(function(d){
+	        var newData = flag ? data : data.slice(1);
+	        console.log(flag)
+	        console.log(newData)
+
+	        update(newData)
+	        flag = !flag
+	    }, 1000);*/
+
+	    // Run the vis for the first time
+	    // update(data);
+		// });
+
+		function update(d) {
+		    var value = flag ? "revenue" : "profit";
+
+		    x.domain(bardata.map(function(d){ return d.month }));
+		    y.domain([0, d3.max(bardata, function(d) { return d[value] })])
+
+		    // X Axis
+		    var xAxisCall = d3.axisBottom(x);
+		    xAxisGroup.transition(t).call(xAxisCall);
+
+		    // Y Axis
+		    var yAxisCall = d3.axisLeft(y)
+		        .tickFormat(function(d){ return "$" + d; });
+		    yAxisGroup.transition(t).call(yAxisCall);
+
+		    // JOIN new data with old elements.
+		    var rects = g.selectAll("rect")
+		        .data(bardata, function(d){
+		            return d.month;
+		        });
+
+		    // EXIT old elements not present in new data.
+		    rects.exit()
+		        .attr("fill", "red")
+		    .transition(t)
+		        .attr("y", y(0))
+		        .attr("height", 0)
+		        // .remove();
+
+		    // ENTER new elements present in new data...
+		    rects.enter()
+		        .append("rect")
+		        	// .attr("fill", "#B3D12D")
+		        	.attr("fill", "blue")
+		            .attr("y", y(0))
+		            .attr("height", 0)
+		            .attr("x", function(d){ return x(d.month) })
+		            .attr("width", x.bandwidth)
+		            // AND UPDATE old elements present in new data.
+		            .merge(rects)
+		            .transition(t)
+		                .attr("x", function(d){ return x(d.month) })
+		                .attr("width", x.bandwidth)
+		                .attr("y", function(d){ return y(d[value]); })
+		                .attr("height", function(d){ return height - y(d[value]); });
+
+		    var label = flag ? "Revenue" : "Profit";
+		    yLabel.text(label);
+
+		}
+
+		// Line chart
+		var groupLG = d3.select(".chart2")
+		    .append("svg")
+		        .attr("width", width + margin.left + margin.right)
+		        .attr("height", height + margin.top + margin.bottom)
+		    .append("g")
+		        .attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
+		        .attr("stroke", "white");
+
+		var xAxisLG = groupLG.append("g")
+		    .attr("class", "x axis")
+		    .attr("stroke", "white")
+		    .attr("transform", "translate(0," + height +")");
+
+		var yAxisLG = groupLG.append("g")
+		    .attr("class", "y axis")
+		    .attr("stroke", "white");
+
+		// X Scale
+		var xLG = d3.scaleBand()
+		    .range([0, width])
+		    .padding(0.2);
+
+		// Y Scale
+		var yLG = d3.scaleLinear()
+		    .range([height, 0]);
+
+		// X Label
+		groupLG.append("text")
+		    .attr("y", height + 55)
+		    .attr("x", width / 2)
+		    .attr("font-size", "20px")
+		    .attr("text-anchor", "middle")
+		    .attr("stroke", "white")
+		    .text("Month");
+
+		// Y Label
+		var yLabelLG = groupLG.append("text")
+		    .attr("y", -65)
+		    .attr("x", -(height / 2))
+		    .attr("font-size", "20px")
+		    .attr("text-anchor", "middle")
+		    .attr("transform", "rotate(-90)")
+		    .attr("stroke", "white")
+		    .text("Revenue");
+
+		// Bar chart data
+		var Linedata = [{"date":"24-Apr-07","close":93.24},{"date":"25-Apr-07","close":95.35},{"date":"26-Apr-07","close":98.84},{"date":"27-Apr-07","close":99.92},{"date":"30-Apr-07","close":99.8},{"date":"1-May-07","close":99.47},{"date":"2-May-07","close":100.39},{"date":"3-May-07","close":100.4},{"date":"4-May-07","close":100.81},{"date":"7-May-07","close":103.92},{"date":"8-May-07","close":105.06},{"date":"9-May-07","close":106.88},{"date":"10-May-07","close":107.34},{"date":"11-May-07","close":108.74},{"date":"14-May-07","close":109.36},{"date":"15-May-07","close":107.52},{"date":"16-May-07","close":107.34},{"date":"2-Jan-08","close":194.84},{"date":"3-Jan-08","close":194.93},{"date":"4-Jan-08","close":180.05},{"date":"7-Jan-08","close":177.64},{"date":"8-Jan-08","close":171.25},{"date":"9-Jan-08","close":179.4},{"date":"10-Jan-08","close":178.02},{"date":"11-Jan-08","close":172.69},{"date":"14-Jan-08","close":178.78},{"date":"15-Jan-08","close":169.04},{"date":"16-Jan-08","close":159.64},{"date":"17-Jan-08","close":160.89},{"date":"18-Jan-08","close":161.36},{"date":"22-Jan-08","close":155.64},{"date":"23-Jan-08","close":139.07},{"date":"24-Jan-08","close":135.6},{"date":"25-Jan-08","close":130.01},{"date":"28-Jan-08","close":130.01},{"date":"29-Jan-08","close":131.54},{"date":"30-Jan-08","close":132.18},{"date":"31-Jan-08","close":135.36},{"date":"1-Feb-08","close":133.75},{"date":"4-Feb-08","close":131.65},{"date":"1-Jan-09","close":85.35},{"date":"2-Jan-09","close":90.75},{"date":"5-Jan-09","close":94.58},{"date":"6-Jan-09","close":93.02},{"date":"7-Jan-09","close":91.01},{"date":"8-Jan-09","close":92.7},{"date":"9-Jan-09","close":90.58},{"date":"12-Jan-09","close":88.66},{"date":"13-Jan-09","close":87.71},{"date":"14-Jan-09","close":85.33},{"date":"15-Jan-09","close":83.38},{"date":"16-Jan-09","close":82.33},{"date":"20-Jan-09","close":78.2},{"date":"21-Jan-09","close":82.83},{"date":"22-Jan-09","close":88.36},{"date":"23-Jan-09","close":88.36},{"date":"26-Jan-09","close":89.64},{"date":"27-Jan-09","close":90.73},{"date":"28-Jan-09","close":94.2},{"date":"29-Jan-09","close":93},{"date":"30-Jan-09","close":90.13},{"date":"2-Feb-09","close":91.51},{"date":"3-Feb-09","close":92.98},{"date":"4-Feb-09","close":93.55},{"date":"5-Feb-09","close":96.46},{"date":"6-Feb-09","close":99.72},{"date":"9-Feb-09","close":102.51},{"date":"1-Jan-10","close":210.73},{"date":"4-Jan-10","close":214.01},{"date":"5-Jan-10","close":214.38},{"date":"6-Jan-10","close":210.97},{"date":"7-Jan-10","close":210.58},{"date":"8-Jan-10","close":211.98},{"date":"11-Jan-10","close":210.11},{"date":"12-Jan-10","close":207.72},{"date":"13-Jan-10","close":210.65},{"date":"14-Jan-10","close":209.43},{"date":"15-Jan-10","close":205.93},{"date":"18-Jan-10","close":205.93},{"date":"19-Jan-10","close":215.04},{"date":"20-Jan-10","close":211.72},{"date":"21-Jan-10","close":208.07},{"date":"22-Jan-10","close":197.75},{"date":"25-Jan-10","close":203.08},{"date":"26-Jan-10","close":205.94},{"date":"27-Jan-10","close":207.88},{"date":"28-Jan-10","close":199.29},{"date":"29-Jan-10","close":192.06},{"date":"1-Feb-10","close":194.73},{"date":"2-Feb-10","close":195.86},{"date":"3-Feb-10","close":199.23},{"date":"4-Feb-10","close":192.05},{"date":"5-Feb-10","close":195.46},{"date":"8-Feb-10","close":194.12},{"date":"9-Feb-10","close":196.19},{"date":"3-Jan-11","close":329.57},{"date":"4-Jan-11","close":331.29},{"date":"5-Jan-11","close":334},{"date":"6-Jan-11","close":333.73},{"date":"7-Jan-11","close":336.12},{"date":"10-Jan-11","close":342.46},{"date":"11-Jan-11","close":341.64},{"date":"12-Jan-11","close":344.42},{"date":"13-Jan-11","close":345.68},{"date":"14-Jan-11","close":348.48},{"date":"18-Jan-11","close":340.65},{"date":"19-Jan-11","close":338.84},{"date":"20-Jan-11","close":332.68},{"date":"21-Jan-11","close":326.72},{"date":"24-Jan-11","close":337.45},{"date":"25-Jan-11","close":341.4},{"date":"26-Jan-11","close":343.85},{"date":"27-Jan-11","close":343.21},{"date":"28-Jan-11","close":336.1},{"date":"31-Jan-11","close":339.32},{"date":"1-Feb-11","close":345.03},{"date":"2-Feb-11","close":344.32},{"date":"3-Feb-11","close":343.44},{"date":"4-Feb-11","close":346.5},{"date":"7-Feb-11","close":351.88},{"date":"8-Feb-11","close":355.2},{"date":"9-Feb-11","close":358.16}];
+
+	  	// render animations
+	  	var render = function() {
+	      	if (scrollTop !== newScrollTop) {
+		        scrollTop = newScrollTop		        
+		    }
+
+		    // Animate Circles in Figure 1
+		    if (scrollTop > 100 && flag1 == "Y") {
+		    	circle1.transition(t)
+		    		.attr("r", 50)
+		    	text1.transition(t)
+		    		.text("text1")
+		    	circle2.transition(t)
+		    		.attr("cx", 1030)
+		    		.attr("r", 50)
+		    	text2.transition(t)
+		    		.attr("x", 1017)
+					.attr("y", 250)
+		    		.text("text2")
+		    	circle3.transition(t)
+		    		.attr("cx", 1230)
+		    		.attr("r", 50)
+		    	text3.transition(t)
+		    		.attr("x", 1217)
+					.attr("y", 250)
+		    		.text("text3")
+		    	circle4.transition(t)
+		    		.attr("cx", 630)
+		    		.attr("r", 50)
+		    	text4.transition(t)
+		    		.attr("x", 617)
+					.attr("y", 250)
+		    		.text("text4")
+		    	circle5.transition(t)
+		    		.attr("cx", 430)
+		    		.attr("r", 50)
+		    	text5.transition(t)
+		    		.attr("x", 417)
+					.attr("y", 250)
+		    		.text("text5")
+		    	flag1 = "N"
+		    }
+
+		    if (scrollTop < 100 && flag1 == "N") {
+		    	circle1.transition(t)
+		    		.attr("r", 100)
+		    	text2.transition(t)
+		    		.text("")
+		    	circle2.transition(t)
+		    		.attr("cx", 830)
+		    		.attr("r", 100)
+		    	text2.transition(t)
+		    		.attr("x", 830)
+					.attr("y", 250)
+		    		.text("")
+		    	circle3.transition(t)
+		    		.attr("cx", 830)
+		    		.attr("r", 100)
+		    	text3.transition(t)
+		    		.attr("x", 830)
+					.attr("y", 250)
+		    		.text("")
+		    	circle4.transition(t)
+		    		.attr("cx", 830)
+		    		.attr("r", 100)
+		    	text4.transition(t)
+		    		.attr("x", 830)
+					.attr("y", 250)
+		    		.text("")
+		    	circle5.transition(t)
+		    		.attr("cx", 830)
+		    		.attr("r", 100)
+		    	text5.transition(t)
+		    		.attr("x", 830)
+					.attr("y", 250)
+		    		.text("")
+		    	flag1 = "Y"
+		    }
+
+		    // Animate chart 1
+		    if (scrollTop > 725 && scrollTop < 1580 && flag2 == "Y") {
+		    	var newData = flag ? bardata : bardata.slice(1);
+		    	update(newData)
+	        	flag = !flag
+	        	flag2 = "N"
+		    }
+
+		    if (scrollTop > 1580 && scrollTop < 2480 && flag2 == "N") {
+		    	var newData = flag ? bardata : bardata.slice(1);
+		    	update(newData)
+	        	flag = !flag
+	        	flag2 = "Y"
+		    }
+
+		    // Render animation
+	      	scrollvalue.text(scrollTop)
+	      	window.requestAnimationFrame(render)
+	    }
+	    window.requestAnimationFrame(render);
+	</script>
+</body>
+</html>
