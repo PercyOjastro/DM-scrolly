@@ -296,13 +296,13 @@
 
 		    if (scrollTop > 4170 && flag5 == "Y") {
 		    	flag5 = "N"
-		    	drawRects();
+		    	drawScatter();
 		    }
 
-		    if (scrollTop < 4170 && flag5 == "N") {
+		    /*if (scrollTop < 4170 && flag5 == "N") {
 		    	flag5 = "Y"
 		    	drawRects();
-		    }
+		    }*/
 
 
 		    // Render animation
