@@ -2,18 +2,31 @@
 
   		body {
   			font-family: 'Ubuntu', sans-serif;
+  			background-color: #ffffff;
   		}
 
   		.screen1 {
-  			background-color: #87B8B8;
+  			/*background-color: #85929E;*/
   		}
 
   		.screen2 {
-  			background-color: #87B8B8;
+  			/*background-color: #85929E;*/
   		}
 
   		.screen3 {
-  			background-color: #BEEDAB;
+  			/*background-color: #85929E;*/
+  		}
+
+  		.screen4 {
+  			/*background-color: #85929E;*/
+  		}
+
+  		.screen5 {
+  			/*background-color: #85929E;*/
+  		}
+
+  		.screen6 {
+  			/*background-color: #85929E;*/
   		}
 
   		.Title {
@@ -28,22 +41,106 @@
   			width: 60%;
   			margin: 0 auto;
   		}
+
   		.circle-para {
   			position: sticky;
   			position: -webkit-sticky;
   			top: 0;
   			height: 700px;
-  			width: 90%;
+  			/*width: 90%;*/
   			z-index: 50;
   			/*border: 2px solid #4CAF50;*/
   			margin: 0 auto;
   		}
 		
 		.filler {
-			height: 500px;
+			height: 800px;
+			width: 30%;
 			/*border: 2px solid;*/
 		}
 
+		.filler2 {
+			/*float: right;*/
+			margin-left: auto;
+			height: 800px;
+			width: 30%;
+			/*border: 2px solid;*/
+		}
+
+		.animation2 {
+			float: right;
+  			position: sticky;
+  			position: -webkit-sticky;
+  			top: 0;
+  			height: 900px;
+  			/*width: 90%;*/
+  			/*z-index: 50;*/
+  			/*border: 2px solid #4CAF50;*/
+  			width: 65%;
+  		}
+
+  		.animation3 {
+  			/*align-self: left;*/
+  			position: sticky;
+  			position: -webkit-sticky;
+  			top: 0;
+  			height: 900px;
+  			/*width: 90%;*/
+  			/*z-index: 50;*/
+  			/*border: 2px solid #4CAF50;*/
+  			width: 65%;
+  		}
+
+		.animation4 {
+			float: right;
+  			position: sticky;
+  			position: -webkit-sticky;
+  			top: 0;
+  			height: 900px;
+  			/*width: 90%;*/
+  			/*z-index: 50;*/
+  			border: 2px solid #4CAF50;
+  			width: 65%;
+  		}
+
+  		.animation5 {
+  			position: sticky;
+  			position: -webkit-sticky;
+  			top: 0;
+  			height: 900px;
+  			/*width: 90%;*/
+  			z-index: 50;
+  			/*border: 2px solid #4CAF50;*/
+  			margin: 0 auto;
+  		}
+
+		.axis path,
+		.axis line {
+		  fill: none;
+		  stroke: black;
+		  shape-rendering: crispEdges;
+		}
+
+		.axis text {
+		  font-family: sans-serif;
+		  font-size: 11px;
+		}
+
+		.tick line
+		{
+		  stroke: #909497;
+		  opacity: 1;
+		}
+
+		g path.domain
+		{
+		  stroke: #4F4F4F;
+		}
+
+		/*.maphalfopaque {
+			opacity: 0.2;
+			filter: alpha(opacity=50);
+		}*/
 		/*.chart1 {
 			float: right;
 			position: -webkit-sticky;
@@ -76,18 +173,3 @@
 		  	width: 63%;
 		}
 */
-		.x.axis line {
-		  stroke: #fff;
-		}
-
-		.y.axis line {
-		  stroke: #fff;
-		}
-
-		.x.axis path {
-		  stroke: #fff;
-		}
-
-		.y.axis path {
-		  stroke: #fff;
-		}
