@@ -16,7 +16,6 @@
 		var xcenter = width / 2;
 		var ycenter = height / 2;
 		var centergap = width / 18;
-		console.log(width)
 		var flag = true;
 		    
 		wholepage
@@ -25,8 +24,6 @@
 	    });
 
 	  	var scrollvalue = d3.selectAll('#scrollvalue');
-
-	  	console.log("Im here");
 
 	  	// Circle 
 	  	var circlesvg = d3.select(".circle-para").append("svg")

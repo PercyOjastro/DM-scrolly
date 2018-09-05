@@ -1,4 +1,5 @@
-	  	var flag5 = "Y";
+	  	var flag5 = "Y",
+	  		flag6 = "Y";
 
 	  	// render animations
 	  	var render = function() {
@@ -9,9 +10,9 @@
 		    // Animate Circles in Figure 1
 		    if (scrollTop > 550 && scrollTop < 800 && flag1 === "Y") try {
 		    	flag1 = "N"
-		    	circle1.transition(t)
+		    	circle1.transition(d3.transition().duration(1000))
 		    		.attr("r", 200)
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("font-size", "2.5rem")
 		    } catch(err) {
 		    	circle1.interrupt()
@@ -20,9 +21,9 @@
 
 		    if (scrollTop < 550 && flag1 === "N") try {
 		    	flag1 = "Y"
-		    	circle1.transition(t)
+		    	circle1.transition(d3.transition().duration(1000))
 		    		.attr("r", 0)
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("font-size", 0)
 		    } catch(err) {
 		    	circle1.interrupt()
@@ -31,9 +32,9 @@
 
 		    if (scrollTop > 800 && scrollTop < 1100 && flag2 === "Y") try {
 		    	flag2 = "N"
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("r", 70)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("font-size", "1.5rem")
 		    } catch(err) {
 		    	circle2.interrupt()
@@ -42,9 +43,9 @@
 
 		    if (scrollTop < 800 && scrollTop > 550 && flag2 === "N") try {
 		    	flag2 = "Y"
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("r", 0)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("font-size", 0)
 		    } catch(err) {
 		    	circle2.interrupt()
@@ -53,21 +54,21 @@
 
 		    if (scrollTop > 1100 && scrollTop < 1550 && flag3 === "Y") try {
 		    	flag3 = "N"
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("y", ycenter - 100 )
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - 60)
 		    		.attr("cy", ycenter)
 		    		.attr("r", 70)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - 70)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", "1rem")
-		    	circle3.transition(t)
+		    	circle3.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + 60)
 		    		.attr("cy", ycenter)
 		    		.attr("r", 70)
-		    	circletxt3.transition(t)
+		    	circletxt3.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + 35)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", "1rem")
@@ -81,21 +82,21 @@
 
 		    if (scrollTop < 1100 && scrollTop > 800 && flag3 === "N") try {
 		    	flag3 = "Y"
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("y", ycenter)
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + 92.5)
 		    		.attr("cy", ycenter + 92.5)
 		    		.attr("r", 70)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + 75)
 					.attr("y", ycenter + 100)
 		    		.attr("font-size", "1.5rem")
-		    	circle3.transition(t)
+		    	circle3.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + 92.5)
 		    		.attr("cy", ycenter + 92.5)
 		    		.attr("r", 0)
-		    	circletxt3.transition(t)
+		    	circletxt3.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + 75)
 					.attr("y", ycenter + 100)
 		    		.attr("font-size", 0)
@@ -109,72 +110,72 @@
 
 			if (scrollTop > 1550 && flag4 === "Y") try {
 				flag4 = "N"
-		    	circle1.transition(t)
+		    	circle1.transition(d3.transition().duration(1000))
 		    		.attr("r", 0)
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("font-size", 0)
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - (centergap * 6))
 		    		.attr("r", 90)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - (centergap * 6) - 50)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
 		    		.text("Credit Cards")
-		    	circle3.transition(t)
+		    	circle3.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + 30)
 		    		.attr("r", 50)
-		    	circletxt3.transition(t)
+		    	circletxt3.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - 20)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
 		    		.text("Cards Services")
-		    	circle4.transition(t)
+		    	circle4.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - (centergap * 4) - 10)
 		    		.attr("r", 40)
-		    	circletxt4.transition(t)
+		    	circletxt4.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - (centergap * 4) - 60)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle5.transition(t)
+		    	circle5.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - (centergap * 2) - 60)
 		    		.attr("r", 50)
-		    	circletxt5.transition(t)
+		    	circletxt5.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - (centergap * 3) - 18)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle6.transition(t)
+		    	circle6.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + (centergap * 2))
 		    		.attr("r", 65)
-		    	circletxt6.transition(t)
+		    	circletxt6.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + (centergap * 2) - 18)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle7.transition(t)
+		    	circle7.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + (centergap * 3.5))
 		    		.attr("r", 35)
-		    	circletxt7.transition(t)
+		    	circletxt7.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + (centergap * 3) + 18)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle8.transition(t)
+		    	circle8.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + (centergap * 5) - 20)
 		    		.attr("r", 45)
-		    	circletxt8.transition(t)
+		    	circletxt8.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + (centergap * 5) - 60)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle9.transition(t)
+		    	circle9.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + (centergap * 6))
 		    		.attr("r", 45)
-		    	circletxt9.transition(t)
+		    	circletxt9.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + (centergap * 6) - 20)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
-		    	circle10.transition(t)
+		    	circle10.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - centergap - 15)
 		    		.attr("r", 45)
-		    	circletxt10.transition(t)
+		    	circletxt10.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - centergap - 38)
 		    		.attr("y", ycenter + 120)
 		    		.attr("font-size", "1rem")
@@ -203,71 +204,71 @@
 
 		    if (scrollTop < 1550 && scrollTop > 1100 && flag4 === "N") try {
 		    	flag4 = "Y"
-		    	circle1.transition(t)
+		    	circle1.transition(d3.transition().duration(1000))
 		    		.attr("r", 200)
-		    	circletxt1.transition(t)
+		    	circletxt1.transition(d3.transition().duration(1000))
 		    		.attr("y", ycenter - 100 )
 		    		.attr("font-size", "2.5rem")
-		    	circle2.transition(t)
+		    	circle2.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter - 60)
 		    		.attr("r", 70)
-		    	circletxt2.transition(t)
+		    	circletxt2.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter - 70)
 		    		.attr("y", ycenter)
 		    		.text("Citi")
-		    	circle3.transition(t)
+		    	circle3.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter + 60)
 		    		.attr("r", 70)
-		    	circletxt3.transition(t)
+		    	circletxt3.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter + 35)
 		    		.attr("y", ycenter)
 		    		.text("Partners")
-		    	circle4.transition(t)
+		    	circle4.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt4.transition(t)
+		    	circletxt4.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle5.transition(t)
+		    	circle5.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt5.transition(t)
+		    	circletxt5.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle6.transition(t)
+		    	circle6.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt6.transition(t)
+		    	circletxt6.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle7.transition(t)
+		    	circle7.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt7.transition(t)
+		    	circletxt7.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle8.transition(t)
+		    	circle8.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt8.transition(t)
+		    	circletxt8.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle9.transition(t)
+		    	circle9.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt9.transition(t)
+		    	circletxt9.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
-		    	circle10.transition(t)
+		    	circle10.transition(d3.transition().duration(1000))
 		    		.attr("cx", xcenter)
 		    		.attr("r", 0)
-		    	circletxt10.transition(t)
+		    	circletxt10.transition(d3.transition().duration(1000))
 		    		.attr("x", xcenter)
 		    		.attr("y", ycenter)
 		    		.attr("font-size", 0)
@@ -296,13 +297,27 @@
 
 		    if (scrollTop > 4170 && flag5 == "Y") {
 		    	flag5 = "N"
-		    	drawScatter();
+		    	scatInit = false;
+		    	scatter(scatrows);
 		    }
 
-		    /*if (scrollTop < 4170 && flag5 == "N") {
+		    if (scrollTop < 4170 && flag5 == "N") {
 		    	flag5 = "Y"
-		    	drawRects();
-		    }*/
+		    	scatInit = true;
+		    	scatter(scatrows);
+		    }
+
+		    if (scrollTop > 7150 && flag6 == "Y") {
+		    	flag6= "N"
+		    	scat2Init = false;
+		    	scat2ter(scat2rows);
+		    }
+
+		    if (scrollTop < 7150 && flag6 == "N") {
+		    	flag6 = "Y"
+		    	scat2Init = true;
+		    	scat2ter(scat2rows);
+		    }
 
 
 		    // Render animation
