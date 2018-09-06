@@ -1,3 +1,8 @@
+	/*
+		AffByAge.js - generates scatter plot for Customer Affluence vs Customer Age
+		by po59726
+	*/
+
 	// init
 	var scatInit = true;
 

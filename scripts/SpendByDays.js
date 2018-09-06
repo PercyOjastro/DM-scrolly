@@ -1,3 +1,8 @@
+	/*
+		SpendByDays.js - generates scatter plot for Customer Spending amount vs Customer Spending days
+		by po59726
+	*/
+
 	// init
 	var scat2Init = true;
 
