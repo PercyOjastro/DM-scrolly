@@ -69,13 +69,13 @@
 		.attr("height", (mapheight - mapmargin.top - mapmargin.bottom))
 		.attr("opacity", 0.80);
 
-	var AUmap2 = mapsvg.append("svg:image")
+	/*var AUmap2 = mapsvg.append("svg:image")
 		.attr("x", mapmargin.left - 50)
 		.attr("y", mapmargin.top + 50)
 		.attr("xlink:href", "images/CitiShare.png")
 		.attr("width",(mapwidth - mapmargin.left - mapmargin.right))
 		.attr("height", (mapheight - mapmargin.top - mapmargin.bottom))
-		.attr("opacity", 0.00);
+		.attr("opacity", 0.00);*/
 
 	// set x-axis
 	var xAxismap = mapsvg.append("g")
