@@ -85,13 +85,13 @@
 	var xScaleMap = d3.scaleBand()
 	    .range([0, mapwidth])
 	    .padding(0.5)
-    mapsvg.append("text")
+    var xLabelMap = mapsvg.append("text")
 	    .attr("y", mapheight + 55)
 	    .attr("x", mapwidth / 2)
 	    .attr("font-size", "20px")
 	    .attr("text-anchor", "middle")
-	    .attr("stroke", "#000000")
-	    .text("States");
+	    .attr("stroke", "#000000");
+	    /*.text("States");*/
 
 	// set y-axis
 	var yAxismap = mapsvg.append("g")
@@ -175,6 +175,8 @@
 		} else {
 			mapVar = "Percent"
 		}
+
+		xLabelMap.text("States");
 
 		var yMapVal = function(d) { return d[mapVar];},
 			yMapScale = function(d) { return yScaleMap(yMapVal(d))};
@@ -294,6 +296,8 @@
 			AUMosaicVar = "PopPct"
 		}
 
+		xLabelMap.text("Mosaic Group");
+
 		var yMapVal = function(d) { return d[AUMosaicVar];},
 			yMapScale = function(d) { return yScaleMap(yMapVal(d))};
 
@@ -390,14 +394,14 @@
 	        	.attr("opacity", 0.9)
 	            .attr("y", yScaleMap(0))
 	            .attr("height", 0)
-	            .attr("x", function(d){ return xScaleMap(d.Group) + 10})
+	            .attr("x", function(d){ return xScaleMap(d.Group) + 15})
 	            .attr("width", xScaleMap.bandwidth)
 	            .on("mouseover", tip6.show)
     			.on("mouseout", tip6.hide)
 	            // AND UPDATE old elements present in new data.
 	            .merge(maprect4)
 	            .transition(d3.transition().duration(1000))
-	                .attr("x", function(d){ return xScaleMap(d.Group) + 10})
+	                .attr("x", function(d){ return xScaleMap(d.Group) + 15})
 	                .attr("width", xScaleMap.bandwidth)
 	                .attr("y", function(d){ return yScaleMap(d[CitiMosaicVar]); })
 	                .attr("height", function(d){ return mapheight - yScaleMap(d[CitiMosaicVar]); });
