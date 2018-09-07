@@ -17,7 +17,7 @@
     	var margin = { left:0, right:0, top:0, bottom:0 };
 
 		var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-		var height = 700 - margin.top - margin.bottom;
+		var height = 600 - margin.top - margin.bottom;
 		var xcenter = width / 2;
 		var ycenter = height / 2;
 		var centergap = width / 18;
@@ -31,7 +31,7 @@
 	  	var scrollvalue = d3.selectAll('#scrollvalue');
 
 	  	// Circle 
-	  	var circlesvg = d3.select(".circle-para").append("svg")
+	  	var circlesvg = d3.select("#morecircles").append("svg")
 			.attr("width", width)
 			.attr("height", height);
 
@@ -48,11 +48,17 @@
 			.attr("font-size", 0)
 			.text("Australia")
 
+		var circletxt1_2 = circlesvg.append("text")
+			.attr("x", xcenter - 50)
+			.attr("y", ycenter + 40)
+			.attr("font-size", 0)
+			.text("25MM")
+
 		var circle2 = circlesvg.append("circle")
 			.attr("cx", xcenter + 92.5)
 			.attr("cy", ycenter + 92.5)
 			.attr("r", 0)
-			.attr("fill", "#1604f9")
+			.attr("fill", "#07155B")
 			.attr("opacity", 0.5)
 
 		var circletxt2 = circlesvg.append("text")
@@ -60,6 +66,12 @@
 			.attr("y", ycenter + 100)
 			.attr("font-size", 0)
 			.text("Citi")
+
+		var circletxt2_1 = circlesvg.append("text")
+			.attr("x", xcenter + 68)
+			.attr("y", ycenter + 120)
+			.attr("font-size", 0)
+			.text("1.7MM")
 
 		var pcttxtCiti = circlesvg.append("text")
 			.attr("x", xcenter - (centergap * 6) - 25)
@@ -80,6 +92,12 @@
 			.attr("font-size", 0)
 			.text("Partners")
 
+		var circletxt3_1 = circlesvg.append("text")
+			.attr("x", xcenter + 35)
+			.attr("y", ycenter + 20)
+			.attr("font-size", 0)
+			.text("0.75MM")
+
 		var pcttxtCS = circlesvg.append("text")
 			.attr("x", xcenter + 72)
     		.attr("y", ycenter)
@@ -90,14 +108,14 @@
 			.attr("cx", xcenter)
 			.attr("cy", ycenter)
 			.attr("r", 0)
-			.attr("fill", "#0470f9")
+			.attr("fill", "#07155B")
 			.attr("opacity", 0.5)
 
 		var circletxt4 = circlesvg.append("text")
 			.attr("x", xcenter)
 			.attr("y", ycenter)
 			.attr("font-size", 0)
-			.text("Ready Credit")
+			.text("Citi Ready Credit")
 
 		var pcttxtRC = circlesvg.append("text")
 			.attr("x", xcenter - (centergap * 4) - 60)
@@ -109,14 +127,14 @@
 			.attr("cx", xcenter)
 			.attr("cy", ycenter)
 			.attr("r", 0)
-			.attr("fill", "#0465F9")
+			.attr("fill", "#07155B")
 			.attr("opacity", 0.5)
 
 		var circletxt5 = circlesvg.append("text")
 			.attr("x", xcenter)
 			.attr("y", ycenter)
 			.attr("font-size", 0)
-			.text("Retail Banking")
+			.text("Citi Retail Banking")
 
 		var pcttxtRetail = circlesvg.append("text")
 			.attr("x", xcenter - (centergap * 3))

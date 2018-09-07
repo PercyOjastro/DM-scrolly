@@ -17,7 +17,7 @@
 			.attr("height", 900)
 
 	var img1 = ppsvg.append("svg:image")
-		.attr("x", (ppwholewidth / 2) - 680)
+		.attr("x", (ppwholewidth / 2) - 500)
 		.attr("y", (ppheight / 2) - 500)
 		.attr("xlink:href", "images/pp-img01.png")
 		.attr("opacity", 0)
@@ -25,32 +25,56 @@
 		.attr("height", 450);
 
 	var img2 = ppsvg.append("svg:image")
-		.attr("x", (ppwholewidth / 2) - 180)
-		.attr("y", (ppheight / 2) -300)
-		.attr("xlink:href", "images/pp-img02.png")
-		.attr("opacity", 1)
-		.attr("width", 0)
-		.attr("height", 0);
-
-	var img3 = ppsvg.append("svg:image")
+		.attr("width", 520)
+		.attr("height", 450)
 		.attr("x", (ppwholewidth / 2) + 145)
 		.attr("y", (ppheight / 2) - 500)
-		.attr("xlink:href", "images/pp-img04.png")
-		.attr("opacity", 1)
-		.attr("width", 0)
-		.attr("height", 0);
+		.attr("xlink:href", "images/pp-img02.png")
+		.attr("opacity", 0);
+
+	var img3 = ppsvg.append("svg:image")
+		.attr("width", 520)
+		.attr("height", 450)
+		.attr("x", (ppwholewidth / 2) - 680)
+		.attr("y", (ppheight / 2) - 100)
+		.attr("xlink:href", "images/pp-img03.png")
+		.attr("opacity", 0);
 
 	var img4 = ppsvg.append("svg:image")
 		.attr("x", (ppwholewidth / 2) + 145)
 		.attr("y", (ppheight / 2) - 100)
-		.attr("xlink:href", "images/pp-img03.png")
+		.attr("xlink:href", "images/pp-img04.png")
+		.attr("opacity", 0)
+		.attr("width", 520)
+		.attr("height", 450);
+
+	var img5 = ppsvg.append("svg:image")
+		.attr("x", (ppwholewidth / 2) - 470)
+		.attr("y", (ppheight / 2) - 400)
+		.attr("xlink:href", "images/pp-img05.png")
+		.attr("opacity", 0)
+		.attr("width", 520)
+		.attr("height", 450);
+
+	var img6 = ppsvg.append("svg:image")
+		.attr("x", (ppwholewidth / 2) - 200)
+		.attr("y", (ppheight / 2) - 300)
+		.attr("xlink:href", "images/pp-img06.png")
+		.attr("opacity", 0)
+		.attr("width", 520)
+		.attr("height", 450);
+
+	var img7 = ppsvg.append("svg:image")
+		.attr("x", (ppwholewidth / 2) - 400)
+		.attr("y", (ppheight / 2) - 50)
+		.attr("xlink:href", "images/pp-img07.png")
 		.attr("opacity", 0)
 		.attr("width", 520)
 		.attr("height", 450);
 
 	var img0 = ppsvg.append("svg:image")
 		.attr("x", (ppwholewidth / 2) - 180)
-		.attr("y", (ppheight / 2) -300)
+		.attr("y", (ppheight / 2) - 300)
 		.attr("xlink:href", "images/pp-img0.png")
 		.attr("width", 350)
 		.attr("height", 450)
