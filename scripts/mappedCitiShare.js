@@ -302,7 +302,8 @@
 			yMapScale = function(d) { return yScaleMap(yMapVal(d))};
 
 		xScaleMap.domain(Data.map(function(d){ return d.Group }));
-	    yScaleMap.domain([0, d3.max(Data, yMapVal)]);
+	    /*yScaleMap.domain([0, d3.max(Data, yMapVal)]);*/
+	    yScaleMap.domain([0, 18]);
 	    	
 	    // Draw X Axis
 	    var xAxisCallMap = d3.axisBottom(xScaleMap)
@@ -394,14 +395,14 @@
 	        	.attr("opacity", 0.9)
 	            .attr("y", yScaleMap(0))
 	            .attr("height", 0)
-	            .attr("x", function(d){ return xScaleMap(d.Group) + 15})
+	            .attr("x", function(d){ return xScaleMap(d.Group) + 20})
 	            .attr("width", xScaleMap.bandwidth)
 	            .on("mouseover", tip6.show)
     			.on("mouseout", tip6.hide)
 	            // AND UPDATE old elements present in new data.
 	            .merge(maprect4)
 	            .transition(d3.transition().duration(1000))
-	                .attr("x", function(d){ return xScaleMap(d.Group) + 15})
+	                .attr("x", function(d){ return xScaleMap(d.Group) + 20})
 	                .attr("width", xScaleMap.bandwidth)
 	                .attr("y", function(d){ return yScaleMap(d[CitiMosaicVar]); })
 	                .attr("height", function(d){ return mapheight - yScaleMap(d[CitiMosaicVar]); });
